@@ -7,19 +7,116 @@
     - Use `git log --decorate` to explore the structure of commits.
 
 ```
+There are two branches in the repository they are :
+master and math
+
+For Master Branch commits are:
+commit 18931d12a8be7cac049b73c6bc8136e9482f3371 (HEAD -> master)
+Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+Date:   Wed Aug 14 23:15:28 2019 -0700
+
+    Making a small change here
+
+commit 654b490a181dedf82dd6deda5f9848d6cca05918
+Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+Date:   Wed Aug 14 23:12:14 2019 -0700
+
+    Added a draft of A.py
+
+commit 2dfb02c3f9383d6c3b2695c99e175d8b85f594a1
+Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+Date:   Wed Aug 14 23:08:47 2019 -0700
+
+     Creating all files (all empty)
+     
+for math branch commits are:
+commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e (HEAD -> math)
+Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+Date:   Wed Aug 14 23:13:48 2019 -0700
+
+    Adding some more knowledge to the function
+
+commit 654b490a181dedf82dd6deda5f9848d6cca05918
+Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+Date:   Wed Aug 14 23:12:14 2019 -0700
+
+    Added a draft of A.py
+
+commit 2dfb02c3f9383d6c3b2695c99e175d8b85f594a1
+Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+Date:   Wed Aug 14 23:08:47 2019 -0700
+
+     Creating all files (all empty)
 
 
 ```
 
 2. Try `git log --graph --all` to see the commit tree. Paste the result here and write a paragraph to provide an interpretation of what you found.
 ```
+ git log --graph --all
+ commit 18931d12a8be7cac049b73c6bc8136e9482f3371 (master)
+| Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| Date:   Wed Aug 14 23:15:28 2019 -0700
+|
+|     Making a small change here
+|
+| * commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e (HEAD -> math)
+|/  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+|   Date:   Wed Aug 14 23:13:48 2019 -0700
+|
+|       Adding some more knowledge to the function
+|
+* commit 654b490a181dedf82dd6deda5f9848d6cca05918
+| Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| Date:   Wed Aug 14 23:12:14 2019 -0700
+|
+|     Added a draft of A.py
+|
+* commit 2dfb02c3f9383d6c3b2695c99e175d8b85f594a1
+  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+  Date:   Wed Aug 14 23:08:47 2019 -0700
 
+       Creating all files (all empty)
+       
+here we can see some commits which are made on Aug 14 
+first commit message is "Creating all files (all empty)
+In second commit Author added a draft A.py 
+In Third Commit Head is pointed to math and Author is added some more knowledge to the function
+In fourth commit Author Added small changes in master branch 
 
 ```
 
 3. Use `git diff BRANCH_NAME` to view the differences from a branch and the current branch. Summarize the difference from master to the other branch.
 
 ```
+the difference between master and math branch is we can see below:
+
+diff --git a/A.py b/A.py
+index 0afa98c..dc1e9bd 100644
+--- a/A.py
++++ b/A.py
+@@ -1,11 +1,3 @@
+ #this is just an example, do not freak out
+ def calculate_this(operator, num1, num2):
+-   if operator == 'sum':
+-      print num1 + num2
+-      print 'That was easy buddy'
+-   else:
+-      if operator == 'subtraction':
+-         print num1 - num2
+-         print 'I could handle that...'
+-      else:
+-         print 'my knowledge is limited'
++   print 'my knowledge is limited'
+diff --git a/B.py b/B.py
+index e69de29..c63f94c 100644
+--- a/B.py
++++ b/B.py
+@@ -0,0 +1 @@
++# Another file that will receive a line of code... at least.
+
+We can see clearly above that if-else-if loops are present in A.py in math branch and there is no if statement in A.py in master branch
+the only difference here is: there is a comment line in B.py (master branch) and B.py (math branch) is empty.
 
 
 ```
@@ -27,7 +124,8 @@
 4. Write a command sequence to merge the non-master branch into `master`.
 
 ```
-
+for merging in Master, intial step is we need to point head to the master branch and we need to use below command to merge the non master branch into master branch
+git merge math
 
 ```
 
@@ -35,7 +133,8 @@
 5. Write a command (or sequence) to (i) create a new branch called `math` (from the `master`) and (ii) change to this branch.
 
 ```
-
+(i) git branch math
+(ii) git checkout math --> Now Head will point to math branch 
 
 ```
    
@@ -47,7 +146,7 @@ print 2+2
 
 7. Write a command (or sequence) to commit your changes.
 ```
-
+git commit -a -m "two lines of code is added to math branch"
 
 ```
 
@@ -58,25 +157,39 @@ print 'hello world!'
 
 9. Write a command sequence to merge the `math` branch into `master` and describe what happened.
 ```
+command: git merge math
+Automatic merge is failed, it says merge conflict in B.py fix conflicts and commit the results    
 
 
 ```
    
 10. Write a set of commands to abort the merge.
 ```
-
+command: git merge --abort
 
 ```
    
 11. Now repeat item 9, but proceed with the manual merge (editing B.py). All implemented methods are needed. Explain your procedure.
 ```
+command: git merge math
 
+in B.py it shows like:
+<<<<<<< HEAD
+# Another file that will receive a line of code... at least.
+=======
+print 'I know math, look:'
+print 2+2
+>>>>>>> math
+
+Here I am just deleting some lines in B.py and manualy editing and commiting changes to master branch.
+
+I used git commit -a -m "merged successfully" to commit the changes that i made.
 
 ```
 
 12. Write a command (or set of commands) to proceed with the merge and make `master` branch up-to-date.
 ```
-
+command is "git merge math" and Now master is branch is upto date.
 
 ```
 
