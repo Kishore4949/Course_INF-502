@@ -5,7 +5,6 @@
     - Use `git branch` to list the branches in this repository.
     - Use `git checkout` to explore each branch.
     - Use `git log --decorate` to explore the structure of commits.
-
 ```
 There are two branches in the repository they are :
 master and math
