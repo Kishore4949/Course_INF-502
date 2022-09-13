@@ -89,7 +89,7 @@ In fourth commit Author Added small changes in master branch
 3. Use `git diff BRANCH_NAME` to view the differences from a branch and the current branch. Summarize the difference from master to the other branch.
 
 ```
-the difference between master and math branch is we can see below:
+the difference between master and math branch is  shown below:
 
 diff --git a/A.py b/A.py
 index 0afa98c..dc1e9bd 100644
