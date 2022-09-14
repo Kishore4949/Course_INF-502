@@ -197,7 +197,7 @@ Report your experience of submitting the Part 2. Please, include the steps you f
 ```
 I used none of the commands. I directly edited a file in a remote repository.
 After editing a file, there will be a commit changes option at the bottom of the file; I chose that, then I went directly to the pull request option.
-After clicking the pull request option,it shows a list of the files you modified will appear; select the file you want to submit a pull request for,
+After clicking the new pull request option,it shows a list of the files you modified will appear; select the file you want to submit a pull request for,
 and it will be accomplished.
 
 ```
