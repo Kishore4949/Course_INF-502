@@ -195,6 +195,9 @@ command is "git merge math" and Now master is branch is upto date.
 13. Complete Part 2. Then, come back here and answer the following:
 Report your experience of submitting the Part 2. Please, include the steps you followed, the commands you used, and the hurdles you faced (within the file you created for the **Part 1**).
 ```
-
+I used none of the commands. I directly edited a file in a remote repository.
+After editing a file, there will be a commit changes option at the bottom of the file; I chose that, then I went directly to the pull request option.
+After clicking the pull request option,it shows a list of the files you modified will appear; select the file you want to submit a pull request for,
+and it will be accomplished.
 
 ```
