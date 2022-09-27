@@ -20,9 +20,18 @@ def DNA(x,y,z):
             count+=1
     k[z]=count
     return k
+with open('fileinput1.txt') as f:
+    contents = f.read()
+    list1=list(map(str,contents.split(" ")))
+with open('fileinput2.txt') as f:
+    contents = f.read()
+    list2=list(map(str,contents.split(" ")))
 
-list1=list(map(str,input().split()))
-list2=list(map(str,input().split()))
+
+print(list1)
+print(list2)
+#list2=list(map(str,input().split()))
+target=int(input("maximum shifts:"))
 list3=[i for i in list1]
 list4=[i for i in list2]
 list5=[i for i in list1]
@@ -31,7 +40,7 @@ first={}
 second={}
 m={}
 m1={}
-for i in range(len(list1)-1):
+for i in range(target):
     list1.insert(0,"-")
     list2.append("-")
     first.update(DNA(list1,list2,i))
