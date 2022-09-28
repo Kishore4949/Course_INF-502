@@ -26,6 +26,8 @@ def pythagoreanTheorem(length_a, length_b):
     return math.sqrt(math.pow(length_a,2)+math.pow(length_b,2))
 print(pythagoreanTheorem(2, 2))
 2.8284271247461903
+print(pythagoreanTheorem(2, 3))
+3.605551275463989
 ```
 (Link to the problem) []
 In your solution markdown, please provide: a link to the .py file, a commented code, the output of a few examples (3-4).
@@ -33,8 +35,6 @@ In your solution markdown, please provide: a link to the .py file, a commented c
 **2. Write a function with the following signature:** `list_mangler(list_in)`.
 
 The function assumes that `list_in` is a list of integers, and returns a new list containing transformed elements of `list_in`. If the element is even, it's doubled. If the element is odd, it's tripled.
-
-
 
 ```
 def list_mangler(list_in):
