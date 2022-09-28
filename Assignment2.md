@@ -29,7 +29,8 @@ print(pythagoreanTheorem(2, 2))
 print(pythagoreanTheorem(2, 3))
 3.605551275463989
 ```
-(Link to the problem) []
+[Link to the problem](https://github.com/Kishore4949/INF-502/blob/main/code/grade_calc.py)
+
 In your solution markdown, please provide: a link to the .py file, a commented code, the output of a few examples (3-4).
 
 **2. Write a function with the following signature:** `list_mangler(list_in)`.
@@ -53,7 +54,8 @@ def list_mangler(list_in):
 print(list_mangler([1, 2, 3, 4]))
 [3, 4, 9, 8]
 ```
-(Link to the problem)[]
+[Link to the problem](https://github.com/Kishore4949/INF-502/blob/main/code/list_mangler.py)
+
 In your solution markdown, please provide: a link to the .py file, a commented code, the output of a few examples (3-4).
 
 **3. Write a function with the following signature:** `grade_calc(grades_in, to_drop)`.
@@ -87,7 +89,8 @@ def grade_calc(grades_in, to_drop):
 print(grade_calc([100, 90, 80, 95], 2)) # drops the 2 lowest grades (80 and 90)
 'A'
 ```
-(Link to the Problem)[]
+[Link to the Problem](https://github.com/Kishore4949/INF-502/blob/main/code/odd_even_filter.py)
+
 In your solution markdown, please provide: a link to the .py file, a commented code, the output of a few examples (3-4).
 
 
@@ -124,5 +127,6 @@ print(odd_even_filter([3, 9, 43, 7]))
 print(odd_even_filter([71, 39, 98, 79, 5, 89, 50, 90, 2, 56]))
 [[98, 50, 90, 2, 56], [71, 39, 79, 5, 89]]
 ```
-(Link to the Problem)[]
+[Link to the Problem](https://github.com/Kishore4949/INF-502/blob/main/code/pythagoreanTheorem.py)
+
 In your solution markdown, please provide: a link to the .py file, a commented code, the output of a few examples (3-4).
