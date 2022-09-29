@@ -11,3 +11,6 @@ def list_mangler(list_in):
     # returning result
     return list_in
 print(list_mangler([1, 2, 3, 4]))
+print(list_mangler([10, 20, 30, 40]))
+print(list_mangler([11, 22, 33, 44]))
+print(list_mangler([1, 21, 31, 24]))

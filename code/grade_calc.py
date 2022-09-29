@@ -19,3 +19,6 @@ def grade_calc(grades_in, to_drop):
     else:
         return "F"
 print(grade_calc([100, 90, 80, 95], 2))
+print(grade_calc([100, 90, 80, 95], 3))
+print(grade_calc([100, 90, 80, 95, 40, 85], 2))
+print(grade_calc([100, 90, 80, 95, 100,100], 2))
