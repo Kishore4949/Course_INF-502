@@ -87,6 +87,12 @@ def grade_calc(grades_in, to_drop):
     else:
         return "F"
 print(grade_calc([100, 90, 80, 95], 2)) # drops the 2 lowest grades (80 and 90)
+print(grade_calc([100, 90, 80, 95], 3))
+print(grade_calc([100, 90, 80, 95, 40, 85], 2))
+print(grade_calc([100, 90, 80, 95, 100,100], 2))
+'A'
+'A'
+'A'
 'A'
 ```
 [Link to the Problem](https://github.com/Kishore4949/INF-502/blob/main/code/grade_calc.py)
