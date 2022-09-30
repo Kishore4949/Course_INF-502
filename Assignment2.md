@@ -28,6 +28,8 @@ print(pythagoreanTheorem(2, 2))
 2.8284271247461903
 print(pythagoreanTheorem(2, 3))
 3.605551275463989
+print(pythagoreanTheorem(4, 5))
+6.4031242374328485
 ```
 [Link to the problem](https://github.com/Kishore4949/INF-502/blob/main/code/pythagoreanTheorem.py)
 
@@ -53,6 +55,12 @@ def list_mangler(list_in):
     
 print(list_mangler([1, 2, 3, 4]))
 [3, 4, 9, 8]
+print(list_mangler([10, 20, 30, 40]))
+[20, 40, 60, 80]
+print(list_mangler([11, 22, 33, 44]))
+[33, 44, 99, 88]
+print(list_mangler([1, 21, 31, 24]))
+[3, 63, 93, 48]
 ```
 [Link to the problem](https://github.com/Kishore4949/INF-502/blob/main/code/list_mangler.py)
 
