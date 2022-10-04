@@ -7,3 +7,4 @@ def pythagoreanTheorem(length_a, length_b):
 length_a=int(input("lenth of the base:"))
 length_b=int(input("height of the triangle:"))
 print(pythagoreanTheorem(length_a, length_b))
+print(pythagoreanTheorem(length_a,length_b))
