@@ -39,6 +39,31 @@ print("skinniest value in wallet is",skinniest(given_list))
 print("Total value of the given wallet is: ",sum(given_list))
 print("The total value of these wallets in dimes is: ",sum(given_list)*10)
  ```
+## Outputs
+### inputs are splitting with ","
+
+input: 1023,984,192,1842,12
+
+fattest value in wallet is 1842
+
+skinniest value in wallet is 12
+
+Total value of the given wallet is:  4053
+
+The total value of these wallets in dimes is:  40530
+
+input: 1,2,3,4,5,6,7
+
+fattest value in wallet is 7
+
+skinniest value in wallet is 1
+
+Total value of the given wallet is:  28
+
+The total value of these wallets in dimes is:  280
+
+
+
 [Link to the problem](https://github.com/Kishore4949/INF-502/blob/main/Assignment3/wallets.py)
 ## Problem 2: Periodic Table 
 
