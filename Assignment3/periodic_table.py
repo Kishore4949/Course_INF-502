@@ -36,7 +36,7 @@ while user_in!=7:
             for i in periodic.keys():
                 print(periodic[i][type_key])
         except KeyError:
-            print("Please enter name, number, row and column ")
+            print("Please give name, number, row and column ")
 
     if user_in==3:
 
@@ -51,7 +51,7 @@ while user_in!=7:
         k["row"]=row
         k["column"]=column
         periodic[symbol]=k
-        print(periodic)
+        print("modified periodic data is: ",periodic)
     if user_in==4:
         symbol=input("Please enter the symbol of an element: ")
         print("Modifying all properties of the given symbol ")
