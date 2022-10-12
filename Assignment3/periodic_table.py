@@ -12,6 +12,58 @@ periodic={
         "column":18
     }
 }
+
+def option_1(periodic):
+    print("Below symbols are present in file.json")
+    for i in periodic.keys():
+        print(i)
+def option_2(periodic):
+    print(" Please select one from name, number, row and column")
+    try:
+        type_key = input()
+
+        for i in periodic.keys():
+            print(periodic[i][type_key])
+    except KeyError:
+        print("Please give name, number, row and column ")
+def option_3(periodic):
+    symbol = input("Enter Symbol of an elemnet: ")
+    name = input("Enter name of the Element: ")
+    number = input("enter a number of an elemnet: ")
+    row = input("enter row number: ")
+    column = input("enter column number: ")
+    k = {}
+    k["name"] = name
+    k["number"] = number
+    k["row"] = row
+    k["column"] = column
+    periodic[symbol] = k
+    print("modified periodic data is: ", periodic)
+def option_4(periodic):
+    symbol = input("Please enter the symbol of an element: ")
+    print("Modifying all properties of the given symbol ")
+    periodic[symbol]["name"] = input("enter the name of the element: ")
+    periodic[symbol]["number"] = int(input("enter the number of the element: "))
+    periodic[symbol]["row"] = int(input("enter the row number: "))
+    periodic[symbol]["column"] = int(input("enter the column number: "))
+    print("modified periodic table is: ", periodic)
+
+
+def option_5(user, periodic):
+    with open(user, 'w') as f:
+        f.write(str(periodic))
+    print(periodic)
+
+
+def option_6(user, periodic):
+    try:
+        with open(user, 'r') as f:
+            periodic = f.read()
+        periodic = eval(periodic)
+        print(user + " file is Loaded Successfully ")
+    except FileNotFoundError:
+        print("Given " + user + " file is not found")
+
 print('''                   ###MENU###
 1.Search the element by symbol (see all the details).
 2.Search by a property (name, number, row, column) and see the values for that property for all the elements in the table.
@@ -22,59 +74,28 @@ print('''                   ###MENU###
 7.Exit the program
 ''')
 user_in=0
+
 while user_in!=7:
     user_in = int(input("Please enter a integer: "))
     if user_in==1:
-        print("Below symbols are present in file.json")
-        for i in periodic.keys():
-            print(i)
+        option_1(periodic)
     if user_in==2:
-        print(" Please select one from name, number, row and column")
-        try:
-            type_key=input()
-
-            for i in periodic.keys():
-                print(periodic[i][type_key])
-        except KeyError:
-            print("Please give name, number, row and column ")
-
+        option_2(periodic)
     if user_in==3:
-
-        symbol=input("Enter Symbol of an elemnet: ")
-        name=input("Enter name of the Element: ")
-        number=input("enter a number of an elemnet: ")
-        row=input("enter row number: ")
-        column=input("enter column number: ")
-        k={}
-        k["name"]=name
-        k["number"]=number
-        k["row"]=row
-        k["column"]=column
-        periodic[symbol]=k
-        print("modified periodic data is: ",periodic)
+        option_3(periodic)
     if user_in==4:
-        symbol=input("Please enter the symbol of an element: ")
-        print("Modifying all properties of the given symbol ")
-        periodic[symbol]["name"]=input("enter the name of the element: ")
-        periodic[symbol]["number"]=int(input("enter the number of the element: "))
-        periodic[symbol]["row"]=int(input("enter the row number: "))
-        periodic[symbol]["column"]=int(input("enter the column number: "))
-        print("modified periodic table is: ",periodic)
+        option_4(periodic)
     if user_in==5:
-        with open(user, 'w') as f:
-            f.write(str(periodic))
-        print(periodic)
+        user = input("Enter the Name of Json File: ")
+        if not user.endswith('.json'):
+            user += '.json'
+        option_5(user,periodic)
+
     if user_in==6:
         user=input("Enter the Name of Json File: ")
         if not user.endswith('.json'):
             user+='.json'
-        try:
-            with open(user,'r') as f:
-                periodic=f.read()
-                periodic = eval(periodic)
-                print(user+" file is Loaded Successfully ")
-        except FileNotFoundError:
-            print("Given "+user+" file is not found")
+        option_6(user,periodic)
     if user_in==7:
         print("Exit")
         break
