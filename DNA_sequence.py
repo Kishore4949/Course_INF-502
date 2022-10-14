@@ -9,7 +9,7 @@ def remove1(k1,k2,t,m):
     # printing sequence1 and sequence2
     s=""
     s1=""
-    
+
     for i in range(len(k1)):
         s+=k1[i]
         s1+=k2[i]
@@ -89,9 +89,9 @@ except FileNotFoundError:
 
 allowed = "AGCT"
 if not (all(ch in allowed for ch in list1)):
-    raise ValueError("file 1 should not contains other than specified character 'A' 'G' 'C' 'T'")
+    raise ValueError("sequence 1 should contains only in these characters  'A' 'G' 'C' 'T'")
 if not (all(ch in allowed for ch in list2)):
-    raise ValueError("file 2 should not contains other than specified character 'A' 'G' 'C' 'T'")
+    raise ValueError("sequence 2 should contains only in these characters 'A' 'G' 'C' 'T'")
 
 
 # target variable input for storing Maximum Shifts, taking from the user
