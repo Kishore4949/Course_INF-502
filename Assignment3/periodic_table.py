@@ -38,7 +38,7 @@ def option_3(periodic):
     k["row"] = row
     k["column"] = column
     periodic[symbol] = k
-    print("modified periodic data is: ", periodic)
+    print("modified periodic_data data is: ", periodic)
 def option_4(periodic):
     symbol = input("Please enter the symbol of an element: ")
     print("Modifying all properties of the given symbol ")
@@ -46,7 +46,7 @@ def option_4(periodic):
     periodic[symbol]["number"] = int(input("enter the number of the element: "))
     periodic[symbol]["row"] = int(input("enter the row number: "))
     periodic[symbol]["column"] = int(input("enter the column number: "))
-    print("modified periodic table is: ", periodic)
+    print("modified periodic_data table is: ", periodic)
 
 
 def option_5(user, periodic):
@@ -69,8 +69,8 @@ print('''                   ###MENU###
 2.Search by a property (name, number, row, column) and see the values for that property for all the elements in the table.
 3.Enter a new element manually (type the information for each property)
 4.Change the properties of an element (by symbol)
-5.Export periodic table as a JSON file
-6.Load periodic table from JSON file
+5.Export periodic_data table as a JSON file
+6.Load periodic_data table from JSON file
 7.Exit the program
 ''')
 user_in=0

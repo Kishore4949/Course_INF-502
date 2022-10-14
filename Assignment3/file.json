@@ -1,1 +1,1 @@
-{'H': {'name': 'Hydrogen', 'number': 1, 'row': 1, 'column': 1}, 'He': {'name': 'Helium', 'number': 2, 'row': 1, 'column': 18}, 'Li': {'name': 'Lithium', 'number': 3, 'row': 2, 'column': 1}}
+{'Li': {'name': 'LITHIUM', 'number': 3, 'row': 1, 'column': 1}, 'Be': {'name': 'Berlium', 'number': 4, 'row': 2, 'column': 13}, 'H': {'name': 'Hydrogen', 'number': '1', 'row': '1', 'column': '1'}}
