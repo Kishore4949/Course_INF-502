@@ -342,6 +342,10 @@ maximum contiguous chain starts from the index:  5
         i += 1
  ```    
     where i is starting index of the continuous sequence
- 
- 
+  ### Benefits
+  1. I got these two approaches and I can use these approaches where ever needed.
+  2. I learnt different logics and functions by solving this question.
 
+* [link to the problem](https://github.com/Kishore4949/INF-502/blob/main/DNA_sequence.py)
+* [link to the file 1](https://github.com/Kishore4949/INF-502/blob/main/fileinput1.txt)
+* [link to the file 2](https://github.com/Kishore4949/INF-502/blob/main/fileinput2.txt)
