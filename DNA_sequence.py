@@ -9,6 +9,7 @@ def remove1(k1,k2,t,m):
     # printing sequence1 and sequence2
     s=""
     s1=""
+    
     for i in range(len(k1)):
         s+=k1[i]
         s1+=k2[i]
